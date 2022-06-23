@@ -1,8 +1,9 @@
-// Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import '~lightbox2/dist/CSS/lightbox.css';
 
-// Variables
-@import 'variables';
+@import '~@mdi/font/css/materialdesignicons.min.css';
 
-// Bootstrap
-@import '~bootstrap/scss/bootstrap';
+@import '~simple-line-icons/css/simple-line-icons.css';
+
+@import "~select2/dist/css/select2.css";
+
+@import "../css/vertical-layout-light/style.css";

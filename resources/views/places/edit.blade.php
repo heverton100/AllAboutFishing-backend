@@ -63,7 +63,8 @@
             <div class="form-group row">
               <div class="col-sm-12">
                 <select class="form-control" id="city" name="city_id">
-                  <option value=''>City</option>
+                  <option value='{{$places->city_id}}'>{{$places->city_name}}</option>
+
                 </select>
               </div>
             </div>
@@ -346,13 +347,13 @@ $("#category").val("{{$places->category}}").change();
 var servicestemp = "{{$places->services}}",
     options = Array.from(document.querySelectorAll('#services option'));
 servicestemp.split(',').forEach(function(v) {
-  options.find(c => c.value == v).selected = true;
+  //options.find(c => c.value == v).selected = true;
 });
 
 var place_fishestemp = "{{$places->place_fishes}}",
     options2 = Array.from(document.querySelectorAll('#place_fishes option'));
 place_fishestemp.split(',').forEach(function(v) {
-  options2.find(c => c.value == v).selected = true;
+  //options2.find(c => c.value == v).selected = true;
 });
 
 $.ajax({
