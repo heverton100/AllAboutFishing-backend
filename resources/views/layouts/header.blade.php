@@ -9,6 +9,8 @@
 
   <link rel="stylesheet" href="{{asset('css/vendor.bundle.base.css')}}">
 
+  <link rel="stylesheet" href="https://api2-allaboutfishing.azurewebsites.net/css/vertical-layout-light/style.css">
+
   <link rel="stylesheet" href="{{ url(mix('css/app.css')) }}">
 
   <!-- CSRF Token -->
