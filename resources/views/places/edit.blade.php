@@ -344,17 +344,29 @@ $('#state').on('change', function () {
 
 $("#category").val("{{$places->category}}").change();
 
-var servicestemp = "{{$places->services}}",
-    options = Array.from(document.querySelectorAll('#services option'));
-servicestemp.split(',').forEach(function(v) {
-  //options.find(c => c.value == v).selected = true;
+var $select001 = $('#services');
+$select001.val(null).trigger('change');
+
+var servicestemp = "{{$places->services}}";
+var temp001 = servicestemp.split(",");
+
+temp001.forEach(function(element){
+  var $option = $('<option selected>'+element+'</option>').val(element);
+  $select001.append($option).trigger('change');
 });
 
-var place_fishestemp = "{{$places->place_fishes}}",
-    options2 = Array.from(document.querySelectorAll('#place_fishes option'));
-place_fishestemp.split(',').forEach(function(v) {
-  //options2.find(c => c.value == v).selected = true;
+
+var $select002 = $('#place_fishes');
+$select002.val(null).trigger('change');
+
+var place_fishestemp = "{{$places->place_fishes}}";
+var temp002 = place_fishestemp.split(",");
+
+temp002.forEach(function(element){
+  var $option2 = $('<option selected>'+element+'</option>').val(element);
+  $select002.append($option2).trigger('change');
 });
+
 
 $.ajax({
     url: "{{url('places/fetch-cities')}}",
